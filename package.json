@@ -15,7 +15,7 @@
     "html"
   ],
   "author": "Paul Fernandez",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "bin": {
     "create-elements": "./index.js"

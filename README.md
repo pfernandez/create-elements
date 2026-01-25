@@ -12,7 +12,7 @@ npm install -g \@pfern/create-elements
 ### Usage
 
 ```sh
-npm \@pfern/create-elements [project-name]
+npx \@pfern/create-elements [project-name]
 
 # Enter a project name if none was provided
 

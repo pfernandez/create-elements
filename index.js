@@ -32,6 +32,11 @@ async function init() {
   try {
     fs.cpSync(templateDir, targetDir, { recursive: true });
 
+    const packageJsonPath = path.join(targetDir, 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    packageJson.name = path.basename(targetDir).toLowerCase();
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+
     const gitignorePath = path.join(targetDir, 'gitignore');
     if (fs.existsSync(gitignorePath)) {
       fs.renameSync(gitignorePath, path.join(targetDir, '.gitignore'));

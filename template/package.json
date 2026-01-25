@@ -1,5 +1,5 @@
 {
-  "name": "elements-template",
+  "name": "elements-app",
   "version": "0.0.1",
   "description": "An elements.js app.",
   "main": "./src/index.js",
