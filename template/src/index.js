@@ -1,5 +1,6 @@
+import './style.css'
 import { body, div, h1, h2, head, header, html,
-         link, main, meta, render, section, title } from '@pfern/elements'
+         main, meta, render, section, title } from '@pfern/elements'
 import { counter } from './components/counter.js'
 import { todos } from './components/todos.js'
 
@@ -8,8 +9,7 @@ render(
     head(
       title('elements.js'),
       meta({ name: 'viewport',
-             content: 'width=device-width, initial-scale=1.0' }),
-      link({ rel: 'stylesheet', href: 'src/style.css' })),
+             content: 'width=device-width, initial-scale=1.0' })),
     body(
       header(
         h1('Elements.js Demo')),
