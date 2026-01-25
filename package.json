@@ -1,0 +1,24 @@
+{
+  "name": "create-elements",
+  "version": "0.0.1",
+  "description": "A CLI script to generate a starter app with elements.js",
+  "main": "index.js",
+  "keywords": [
+    "ui",
+    "functional",
+    "declarative",
+    "frontend",
+    "vdom",
+    "jsx-free",
+    "stateless",
+    "recursive",
+    "html"
+  ],
+  "author": "Paul Fernandez",
+  "license": "ISC",
+  "type": "module",
+  "bin": {
+    "create-elements": "./index.js"
+  },
+  "files": ["index.js", "template/"]
+}
