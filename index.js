@@ -13,10 +13,10 @@ async function init() {
 
   if (!projectName) {
     const rl = readline.createInterface({ input, output });
-    projectName = await rl.question('Project name: (my-elements-app) ');
+    projectName = await rl.question('Project name: (elements-app) ');
     rl.close();
 
-    projectName = projectName.trim() || 'my-elements-app';
+    projectName = projectName.trim() || 'elements-app';
   }
 
   const targetDir = path.resolve(process.cwd(), projectName);
