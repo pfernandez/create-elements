@@ -7,25 +7,20 @@ const link = (path, label, active) =>
   a({
     href: path,
     class: active ? 'active' : '',
-    onclick: event => {
-      event?.preventDefault?.()
-      return app(go(path, { force: true }))
-    }
+    onclick: () => app(go(path, { force: true }))
   }, label)
 
 const navbar = path =>
   nav(
     link('/', 'Home', path === '/'),
-    ' · ',
     link('/todos', 'Todos', path === '/todos'),
-    ' · ',
     link('/counters', 'Counters', path === '/counters'))
 
 const home = () =>
   section(
     h2('Home'),
-    div(
-      'This template shows a tiny router (history + popstate), a todos app, and independent counters.'))
+    div(`This template shows a tiny router (history + popstate), a todos app,
+         and independent counters.`))
 
 const counters = () =>
   section({ class: 'grid' },

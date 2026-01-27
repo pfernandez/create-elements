@@ -21,8 +21,7 @@ export const todos = component(
           button({ type: 'submit' }, 'Add')),
 
         ul(...items.map(item =>
-          li(
-            { style:
+          li({ style:
               { 'text-decoration': item.done ? 'line-through' : 'none' } },
             span({ onclick: () => toggle(item) }, item.value),
             button({ onclick: () => remove(item) }, '✕'))))))})

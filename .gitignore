@@ -1,5 +1,6 @@
-elements-app
 node_modules
+package-lock.json
 template/node_modules
 template/dist
 template/package-lock.json
+elements-app
