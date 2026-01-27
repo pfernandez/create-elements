@@ -18,7 +18,10 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "create-elements": "./index.js"
+    "create-elements": "index.js"
   },
-  "files": ["index.js", "template/"]
+  "files": [
+    "index.js",
+    "template/"
+  ]
 }

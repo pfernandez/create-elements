@@ -1,8 +1,7 @@
 import './style.css'
-import { body, div, h1, h2, head, header, html,
-         main, meta, render, section, title } from '@pfern/elements'
-import { counter } from './components/counter.js'
-import { todos } from './components/todos.js'
+import { body, h1, head, header, html,
+         meta, render, title } from '@pfern/elements'
+import { app } from './components/app.js'
 
 render(
   html(
@@ -13,15 +12,4 @@ render(
     body(
       header(
         h1('Elements.js Demo')),
-      main(
-        section(
-          h2('Todos'),
-          todos()),
-        section({ class: 'grid' },
-          div(
-            h2('Counter 1'),
-            counter()),
-          div(
-            h2('Counter 2'),
-            counter()))))))
-
+      app())))

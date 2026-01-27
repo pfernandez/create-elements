@@ -43,6 +43,14 @@ body>header, header {
   padding-bottom: 0;
 }
 
+nav {
+  padding-bottom: 1em;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
 section {
   border-top: 1px solid #ddd;
   padding-top: 1em;
@@ -92,4 +100,3 @@ li > button {
 .todos li {
   cursor: pointer;
 }
-
