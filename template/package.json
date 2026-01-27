@@ -16,7 +16,7 @@
     "url": ""
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^9.39.2",
     "vite": "^7.3.1"
