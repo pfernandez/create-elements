@@ -26,7 +26,7 @@ export const navigate = (path, { replace = false, force = false } = {}) => {
 }
 
 export const currentPath = () =>
-  (typeof window === 'undefined')
+  typeof window === 'undefined'
     ? '/'
     : window.location.pathname || '/'
 

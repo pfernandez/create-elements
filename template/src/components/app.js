@@ -1,14 +1,13 @@
 import { a, component, div, h2, main, nav, section } from '@pfern/elements'
+import { currentPath, go, normalizePath } from '../router.js'
 import { counter } from './counter.js'
 import { todos } from './todos.js'
-import { currentPath, go, normalizePath } from '../router.js'
 
 const link = (path, label, active) =>
-  a({
-    href: path,
-    class: active ? 'active' : '',
-    onclick: () => app(go(path, { force: true }))
-  }, label)
+  a({ href: path,
+      class: active ? 'active' : '',
+      onclick: () => app(go(path, { force: true })) },
+    label)
 
 const navbar = path =>
   nav(
@@ -23,21 +22,18 @@ const home = () =>
          and independent counters.`))
 
 const counters = () =>
-  section({ class: 'grid' },
-    div(
-      h2('Counter 1'),
-      counter()),
-    div(
-      h2('Counter 2'),
-      counter()))
+  section(
+    { class: 'grid' },
+    div(h2('Counter 1'), counter()),
+    div(h2('Counter 2'), counter()))
 
 export const app = component((path = currentPath()) => {
   path = normalizePath(path)
 
   const view =
     path === '/todos' ? todos()
-    : path === '/counters' ? counters()
-    : home()
+      : path === '/counters' ? counters()
+        : home()
 
   return main(
     navbar(path),

@@ -15,14 +15,14 @@ export const todos = component(
 
     return (
       div({ class: 'todos' },
+          form({ onsubmit: add },
+               input({ name: 'todo', placeholder: 'What needs doing?' }),
+               button({ type: 'submit' }, 'Add')),
 
-        form({ onsubmit: add },
-          input({ name: 'todo', placeholder: 'What needs doing?' }),
-          button({ type: 'submit' }, 'Add')),
-
-        ul(...items.map(item =>
-          li({ style:
-              { 'text-decoration': item.done ? 'line-through' : 'none' } },
-            span({ onclick: () => toggle(item) }, item.value),
-            button({ onclick: () => remove(item) }, '✕'))))))})
+          ul(...items.map(item =>
+            li({ style:
+                 { 'text-decoration': item.done ? 'line-through' : 'none' } },
+               span({ onclick: () => toggle(item) }, item.value),
+               button({ onclick: () => remove(item) }, '✕'))))))
+  })
 

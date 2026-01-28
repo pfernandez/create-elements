@@ -29,3 +29,8 @@ npm test
 
 Routes are defined in `src/router.js` and used from `src/components/app.js`.
 Navigation uses the History API so the address bar stays in sync.
+
+## Linting & Formatting
+
+The rules in `eslint.config.json` are there to allow for the Formatting style
+used in the examples. Feel free to remove or edit them if preferred.
