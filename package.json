@@ -1,6 +1,6 @@
 {
   "name": "@pfern/create-elements",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CLI script to generate a starter app with elements.js",
   "main": "index.js",
   "keywords": [
