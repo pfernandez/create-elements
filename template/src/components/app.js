@@ -6,7 +6,7 @@ import { todos } from './todos.js'
 const link = (path, label, active) =>
   a({ href: path,
       class: active ? 'active' : '',
-      onclick: () => app(go(path, { force: true })) },
+      onclick: () => app(go(path)) },
     label)
 
 const navbar = path =>
