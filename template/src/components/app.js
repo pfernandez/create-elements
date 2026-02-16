@@ -1,4 +1,4 @@
-import { a, component, div, h2, main, nav, onNavigate, section }
+import { a, component, div, h2, main, nav, section }
   from '@pfern/elements'
 import { counter } from './counter.js'
 import { todos } from './todos.js'
