@@ -1,5 +1,5 @@
-import { button, component, div,
-         form, input, li, span, ul } from '@pfern/elements'
+import { button, component, form, input, li, section, span, ul }
+  from '@pfern/elements'
 
 export const todos = component(
   (items = [{ value: 'Add my first todo', done: true }]) => {
@@ -14,7 +14,7 @@ export const todos = component(
       todos(items.map(i => i === item ? { ...i, done: !item.done } : i))
 
     return (
-      div({ class: 'todos' },
+      section({ class: 'todos' },
           form({ onsubmit: add },
                input({ name: 'todo', placeholder: 'What needs doing?' }),
                button({ type: 'submit' }, 'Add')),

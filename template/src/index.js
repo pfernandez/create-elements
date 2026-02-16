@@ -1,7 +1,9 @@
 import './style.css'
-import { body, h1, head, header, html,
-         meta, render, title } from '@pfern/elements'
+import { body, h1, head, header, html, meta, onNavigate, render, title }
+  from '@pfern/elements'
 import { app } from './components/app.js'
+
+onNavigate(app)
 
 render(
   html(

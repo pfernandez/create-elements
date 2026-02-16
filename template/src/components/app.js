@@ -1,13 +1,10 @@
-import { a, component, div, h2, main, nav, section } from '@pfern/elements'
-import { currentPath, go, normalizePath } from '../router.js'
+import { a, component, div, h2, main, nav, onNavigate, section }
+  from '@pfern/elements'
 import { counter } from './counter.js'
 import { todos } from './todos.js'
 
 const link = (path, label, active) =>
-  a({ href: path,
-      class: active ? 'active' : '',
-      onclick: () => app(go(path)) },
-    label)
+  a({ href: path, class: active ? 'active' : '' }, label)
 
 const navbar = path =>
   nav(
@@ -27,20 +24,10 @@ const counters = () =>
     div(h2('Counter 1'), counter()),
     div(h2('Counter 2'), counter()))
 
-export const app = component((path = currentPath()) => {
-  path = normalizePath(path)
-
-  const view =
-    path === '/todos' ? todos()
-      : path === '/counters' ? counters()
-        : home()
-
-  return main(
+export const app = component((path = window.location.pathname) =>
+  main(
     navbar(path),
-    view)
-})
-
-if (typeof window !== 'undefined') {
-  window.addEventListener('popstate', () => app(currentPath()))
-}
+    path === '/todos' ? todos()
+    : path === '/counters' ? counters()
+    : home()))
 
